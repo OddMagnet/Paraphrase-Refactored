@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C6D8E9F24E304D10020250C /* ParaphraseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D8E9E24E304D10020250C /* ParaphraseTests.swift */; };
 		513E9D02209F44D100A0E43A /* BaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E9CF8209F44D100A0E43A /* BaseDestination.swift */; };
 		513E9D03209F44D100A0E43A /* GoogleCloudDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E9CF9209F44D100A0E43A /* GoogleCloudDestination.swift */; };
 		513E9D04209F44D100A0E43A /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E9CFA209F44D100A0E43A /* AES256CBC.swift */; };
@@ -28,7 +29,20 @@
 		51C94E0D209DE5B800298E4F /* EditQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C94E0C209DE5B800298E4F /* EditQuoteViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4C6D8EA124E304D10020250C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51C94DE9209DACDB00298E4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51C94DF0209DACDB00298E4F;
+			remoteInfo = Paraphrase;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4C6D8E9C24E304D10020250C /* ParaphraseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParaphraseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6D8E9E24E304D10020250C /* ParaphraseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaphraseTests.swift; sourceTree = "<group>"; };
+		4C6D8EA024E304D10020250C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		513E9CF8209F44D100A0E43A /* BaseDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDestination.swift; sourceTree = "<group>"; };
 		513E9CF9209F44D100A0E43A /* GoogleCloudDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudDestination.swift; sourceTree = "<group>"; };
 		513E9CFA209F44D100A0E43A /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES256CBC.swift; sourceTree = "<group>"; };
@@ -53,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C6D8E9924E304D00020250C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51C94DEE209DACDB00298E4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C6D8E9D24E304D10020250C /* ParaphraseTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C6D8E9E24E304D10020250C /* ParaphraseTests.swift */,
+				4C6D8EA024E304D10020250C /* Info.plist */,
+			);
+			path = ParaphraseTests;
+			sourceTree = "<group>";
+		};
 		513E9CF7209F44C900A0E43A /* SwiftyBeaver */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				51C94DF3209DACDB00298E4F /* Paraphrase */,
+				4C6D8E9D24E304D10020250C /* ParaphraseTests */,
 				51C94DF2209DACDB00298E4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				51C94DF1209DACDB00298E4F /* Paraphrase.app */,
+				4C6D8E9C24E304D10020250C /* ParaphraseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C6D8E9B24E304D00020250C /* ParaphraseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C6D8EA324E304D10020250C /* Build configuration list for PBXNativeTarget "ParaphraseTests" */;
+			buildPhases = (
+				4C6D8E9824E304D00020250C /* Sources */,
+				4C6D8E9924E304D00020250C /* Frameworks */,
+				4C6D8E9A24E304D00020250C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C6D8EA224E304D10020250C /* PBXTargetDependency */,
+			);
+			name = ParaphraseTests;
+			productName = ParaphraseTests;
+			productReference = 4C6D8E9C24E304D10020250C /* ParaphraseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		51C94DF0209DACDB00298E4F /* Paraphrase */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51C94E03209DACDC00298E4F /* Build configuration list for PBXNativeTarget "Paraphrase" */;
@@ -140,10 +190,14 @@
 		51C94DE9209DACDB00298E4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Hacking with Swift";
 				TargetAttributes = {
+					4C6D8E9B24E304D00020250C = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 51C94DF0209DACDB00298E4F;
+					};
 					51C94DF0209DACDB00298E4F = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1160;
@@ -164,11 +218,19 @@
 			projectRoot = "";
 			targets = (
 				51C94DF0209DACDB00298E4F /* Paraphrase */,
+				4C6D8E9B24E304D00020250C /* ParaphraseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C6D8E9A24E304D00020250C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51C94DEF209DACDB00298E4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +245,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C6D8E9824E304D00020250C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6D8E9F24E304D10020250C /* ParaphraseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51C94DED209DACDB00298E4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +277,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4C6D8EA224E304D10020250C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51C94DF0209DACDB00298E4F /* Paraphrase */;
+			targetProxy = 4C6D8EA124E304D10020250C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		51C94DF8209DACDB00298E4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -227,6 +305,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C6D8EA424E304D10020250C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5ZJLTFVCL;
+				INFOPLIST_FILE = ParaphraseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = oddmagnet.com.ParaphraseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paraphrase.app/Paraphrase";
+			};
+			name = Debug;
+		};
+		4C6D8EA524E304D10020250C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5ZJLTFVCL;
+				INFOPLIST_FILE = ParaphraseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = oddmagnet.com.ParaphraseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paraphrase.app/Paraphrase";
+			};
+			name = Release;
+		};
 		51C94E01209DACDC00298E4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,6 +503,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C6D8EA324E304D10020250C /* Build configuration list for PBXNativeTarget "ParaphraseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C6D8EA424E304D10020250C /* Debug */,
+				4C6D8EA524E304D10020250C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		51C94DEC209DACDB00298E4F /* Build configuration list for PBXProject "Paraphrase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
