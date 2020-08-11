@@ -19,4 +19,8 @@ class ParaphraseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    func testLoadingInitialQuotes() {
+        let model = QuotesModel(testing: true)
+        XCTAssert(model.count == 12)
+    }
 }
