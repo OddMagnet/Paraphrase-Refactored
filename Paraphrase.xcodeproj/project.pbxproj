@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C6D8E9F24E304D10020250C /* ParaphraseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D8E9E24E304D10020250C /* ParaphraseTests.swift */; };
+		4C6D8EA824E305CD0020250C /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D8EA724E305CD0020250C /* QuotesModel.swift */; };
 		513E9D02209F44D100A0E43A /* BaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E9CF8209F44D100A0E43A /* BaseDestination.swift */; };
 		513E9D03209F44D100A0E43A /* GoogleCloudDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E9CF9209F44D100A0E43A /* GoogleCloudDestination.swift */; };
 		513E9D04209F44D100A0E43A /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E9CFA209F44D100A0E43A /* AES256CBC.swift */; };
@@ -43,6 +44,7 @@
 		4C6D8E9C24E304D10020250C /* ParaphraseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParaphraseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6D8E9E24E304D10020250C /* ParaphraseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaphraseTests.swift; sourceTree = "<group>"; };
 		4C6D8EA024E304D10020250C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C6D8EA724E305CD0020250C /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
 		513E9CF8209F44D100A0E43A /* BaseDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDestination.swift; sourceTree = "<group>"; };
 		513E9CF9209F44D100A0E43A /* GoogleCloudDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudDestination.swift; sourceTree = "<group>"; };
 		513E9CFA209F44D100A0E43A /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES256CBC.swift; sourceTree = "<group>"; };
@@ -93,6 +95,15 @@
 			path = ParaphraseTests;
 			sourceTree = "<group>";
 		};
+		4C6D8EA624E305B30020250C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51C94E08209DB1CF00298E4F /* Quote.swift */,
+				4C6D8EA724E305CD0020250C /* QuotesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		513E9CF7209F44C900A0E43A /* SwiftyBeaver */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,10 +149,10 @@
 				51C94E0A209DBC9B00298E4F /* ShowQuoteViewController.swift */,
 				51C94DF8209DACDB00298E4F /* Main.storyboard */,
 				51C94DFB209DACDC00298E4F /* Assets.xcassets */,
+				4C6D8EA624E305B30020250C /* Model */,
 				51C94DFD209DACDC00298E4F /* LaunchScreen.storyboard */,
 				51C94E00209DACDC00298E4F /* Info.plist */,
 				51C94E06209DB16100298E4F /* initial-quotes.json */,
-				51C94E08209DB1CF00298E4F /* Quote.swift */,
 			);
 			path = Paraphrase;
 			sourceTree = "<group>";
@@ -271,6 +282,7 @@
 				513E9D02209F44D100A0E43A /* BaseDestination.swift in Sources */,
 				513E9D05209F44D100A0E43A /* FileDestination.swift in Sources */,
 				513E9D0B209F44D100A0E43A /* Base64.swift in Sources */,
+				4C6D8EA824E305CD0020250C /* QuotesModel.swift in Sources */,
 				513E9D03209F44D100A0E43A /* GoogleCloudDestination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
