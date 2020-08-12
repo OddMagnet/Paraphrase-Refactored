@@ -54,4 +54,8 @@ struct QuotesModel {
         let randomNumber = randomSource?.nextInt(upperBound: quotes.count) ?? 0
         return quote(at: randomNumber)
     }
+    
+    mutating func add(_ quote: Quote) {
+        quotes.append(quote)
+    }
 }

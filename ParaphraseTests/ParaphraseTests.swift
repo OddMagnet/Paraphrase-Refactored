@@ -76,4 +76,23 @@ class ParaphraseTests: XCTestCase {
         
         XCTAssert(quote.attributedString == testString)
     }
+    
+    func testAddingQuote() {
+        var model = QuotesModel(testing: true)
+        let quoteCount = model.count
+        
+        let newQuote = Quote(author: "Paul Hudson", text: "Programming is an art. Don't spend all your time sharpening your pencil when you should be drawing.")
+        model.add(newQuote)
+
+        XCTAssert(model.count == quoteCount + 1)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
