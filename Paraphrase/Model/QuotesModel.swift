@@ -58,4 +58,8 @@ struct QuotesModel {
     mutating func add(_ quote: Quote) {
         quotes.append(quote)
     }
+    
+    mutating func remove(at index: Int) {
+        quotes.remove(at: index)
+    }
 }

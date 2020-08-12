@@ -87,7 +87,14 @@ class ParaphraseTests: XCTestCase {
         XCTAssert(model.count == quoteCount + 1)
     }
     
-    
+    func testRemovingQuote() {
+        var model = QuotesModel(testing: true)
+        let quoteCount = model.count
+        
+        model.remove(at: 0)
+        XCTAssert(model.count == quoteCount - 1)
+    }
+
     
     
     
