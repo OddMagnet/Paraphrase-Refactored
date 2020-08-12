@@ -23,4 +23,15 @@ class ParaphraseTests: XCTestCase {
         let model = QuotesModel(testing: true)
         XCTAssert(model.count == 12)
     }
+    
+    func testRandomQuote() {
+        let model = QuotesModel(testing: true)
+        
+        guard let quote = model.random() else {
+            XCTFail()
+            return
+        }
+                
+        XCTAssert(quote.author == "Eliot")
+    }
 }

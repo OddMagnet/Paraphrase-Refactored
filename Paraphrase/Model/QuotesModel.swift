@@ -7,15 +7,23 @@
 //
 
 import Foundation
+import GameplayKit
 
 struct QuotesModel {
     private var quotes = [Quote]()
+    var randomSource: GKRandomSource?
     
     var count: Int {
         quotes.count
     }
     
     init(testing: Bool = false) {
+        if testing {
+            randomSource = GKMersenneTwisterRandomSource(seed: 1)
+        } else {
+            randomSource = GKMersenneTwisterRandomSource()
+        }
+        
         // load our quote data
         let defaults = UserDefaults.standard
         let quoteData : Data
@@ -34,5 +42,12 @@ struct QuotesModel {
 
         let decoder = JSONDecoder()
         quotes = try! decoder.decode([Quote].self, from: quoteData)
+    }
+    
+    func random() -> Quote? {
+        guard !quotes.isEmpty else { return nil }
+        
+        let randomNumber = randomSource?.nextInt(upperBound: quotes.count) ?? 0
+        return quotes[randomNumber]
     }
 }
