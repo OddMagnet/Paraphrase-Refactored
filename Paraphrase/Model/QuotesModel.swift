@@ -44,10 +44,14 @@ struct QuotesModel {
         quotes = try! decoder.decode([Quote].self, from: quoteData)
     }
     
+    func quote(at position: Int) -> Quote {
+        return quotes[position]
+    }
+    
     func random() -> Quote? {
         guard !quotes.isEmpty else { return nil }
         
         let randomNumber = randomSource?.nextInt(upperBound: quotes.count) ?? 0
-        return quotes[randomNumber]
+        return quote(at: randomNumber)
     }
 }
