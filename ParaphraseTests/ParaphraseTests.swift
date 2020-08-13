@@ -95,10 +95,26 @@ class ParaphraseTests: XCTestCase {
         XCTAssert(model.count == quoteCount - 1)
     }
 
+    func testReplacingQuote() {
+        var model = QuotesModel(testing: true)
+
+        let newQuote = Quote(author: "Ted Logan", text: "All we are is dust in the wind, dude.")
+        model.replace(index: 0, with: newQuote)
+
+        let testQuote = model.quote(at: 0)
+        XCTAssert(testQuote.author == "Ted Logan")
+    }
     
-    
-    
-    
+    func testReplacingEmptyQuote() {
+        var model = QuotesModel(testing: true)
+        let quoteCount = model.count
+
+        let newQuote = Quote(author: "", text: "")
+        model.replace(index: 0, with: newQuote)
+        
+        XCTAssert(model.count == quoteCount - 1)
+    }
+
     
     
     
