@@ -6,11 +6,11 @@ target 'Paraphrase' do
   use_frameworks!
 
   # Pods for Paraphrase
+  pod 'SwiftyBeaver'
 
   target 'ParaphraseTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SwiftyBeaver'
   end
 
 end

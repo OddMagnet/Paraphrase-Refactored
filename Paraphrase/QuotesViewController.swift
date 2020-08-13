@@ -3,11 +3,13 @@
 //  Paraphrase
 //
 //  Created by Paul Hudson on 05/05/2018.
+//  Updated / Refactored by Michael Brünen on 11.08.20.
 //  Copyright © 2018 Hacking with Swift. All rights reserved.
 //
 
 import GameplayKit
 import UIKit
+import SwiftyBeaver
 
 class QuotesViewController: UITableViewController {
     // all the quotes to be shown in our table
