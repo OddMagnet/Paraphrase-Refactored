@@ -57,9 +57,34 @@ struct QuotesModel {
     
     mutating func add(_ quote: Quote) {
         quotes.append(quote)
+        save()
     }
     
     mutating func remove(at index: Int) {
         quotes.remove(at: index)
+        save()
     }
+    
+    mutating func replace(index: Int, with quote: Quote) {
+        if quote.author.isEmpty && quote.text.isEmpty {
+            // if no text was entered just delete the quote
+            SwiftyBeaver.info("Removing empty quote")
+            remove(at: index)
+        } else {
+            // replace our existing quote with this new one then save
+            SwiftyBeaver.info("Replacing quote at index \(index)")
+            quotes[index] = quote
+            save()
+        }
+    }
+    
+    func save() {
+        let defaults = UserDefaults.standard
+        let encoder = JSONEncoder()
+
+        let data = try! encoder.encode(quotes)
+        defaults.set(data, forKey: "SavedQuotes")
+        SwiftyBeaver.info("Quotes saved")
+    }
+
 }
