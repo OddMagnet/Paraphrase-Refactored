@@ -18,33 +18,33 @@ class ParaphraseTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func testLoadingInitialQuotes() {
         let model = QuotesModel(testing: true)
         XCTAssert(model.count == 12)
     }
-    
+
     func testRandomQuote() {
         let model = QuotesModel(testing: true)
-        
+
         guard let quote = model.random() else {
-            XCTFail()
+            XCTFail("Failed to get a random quote")
             return
         }
-                
+
         XCTAssert(quote.author == "Eliot")
     }
-    
+
     func testSingleLineFormatting() {
         let model = QuotesModel(testing: true)
         let quote = model.quote(at: 0)
 
         let formattedText = quote.text.replacingOccurrences(of: "\n", with: " ")
         let testString = "\(quote.author): \(formattedText)"
-        
+
         XCTAssert(quote.singleLine == testString)
     }
-    
+
     func testMultiLineFormatting() {
         let model = QuotesModel(testing: true)
         let quote = model.quote(at: 0)
@@ -52,7 +52,7 @@ class ParaphraseTests: XCTestCase {
         let testString = "\"\(quote.text)\"\n   — \(quote.author)"
         XCTAssert(quote.multiLine == testString)
     }
-    
+
     func testAttributedStringFormatting() {
         let model = QuotesModel(testing: true)
         let quote = model.quote(at: 0)
@@ -73,24 +73,24 @@ class ParaphraseTests: XCTestCase {
         let testString = NSMutableAttributedString(string: quote.text, attributes: textAttributes)
         let authorString = NSAttributedString(string: "\n\n\(quote.author)", attributes: authorAttributes)
         testString.append(authorString)
-        
+
         XCTAssert(quote.attributedString == testString)
     }
-    
+
     func testAddingQuote() {
         var model = QuotesModel(testing: true)
         let quoteCount = model.count
-        
+
         let newQuote = Quote(author: "Paul Hudson", text: "Programming is an art. Don't spend all your time sharpening your pencil when you should be drawing.")
         model.add(newQuote)
 
         XCTAssert(model.count == quoteCount + 1)
     }
-    
+
     func testRemovingQuote() {
         var model = QuotesModel(testing: true)
         let quoteCount = model.count
-        
+
         model.remove(at: 0)
         XCTAssert(model.count == quoteCount - 1)
     }
@@ -111,11 +111,8 @@ class ParaphraseTests: XCTestCase {
 
         let newQuote = Quote(author: "", text: "")
         model.replace(index: 0, with: newQuote)
-        
+
         XCTAssert(model.count == quoteCount - 1)
     }
 
-    
-    
-    
 }
