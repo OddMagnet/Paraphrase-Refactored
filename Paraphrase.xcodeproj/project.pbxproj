@@ -177,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51C94E03209DACDC00298E4F /* Build configuration list for PBXNativeTarget "Paraphrase" */;
 			buildPhases = (
+				4CEBD6F924E6CA370094E2C0 /* ShellScript */,
 				A96CC48D325107CF3207D205 /* [CP] Check Pods Manifest.lock */,
 				51C94DED209DACDB00298E4F /* Sources */,
 				51C94DEE209DACDB00298E4F /* Frameworks */,
@@ -253,6 +254,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4CEBD6F924E6CA370094E2C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nif which swiftlint >/dev/null; then\nswiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\nfi\n";
+		};
 		A96CC48D325107CF3207D205 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
