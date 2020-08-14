@@ -104,7 +104,7 @@ class ParaphraseTests: XCTestCase {
         let testQuote = model.quote(at: 0)
         XCTAssert(testQuote.author == "Ted Logan")
     }
-    
+
     func testReplacingEmptyQuote() {
         var model = QuotesModel(testing: true)
         let quoteCount = model.count
