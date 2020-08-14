@@ -12,19 +12,19 @@ struct Quote: Codable, Comparable {
     var author: String
     var text: String
 
-    static func <(lhs: Quote, rhs: Quote) -> Bool {
+    static func < (lhs: Quote, rhs: Quote) -> Bool {
         return lhs.author < rhs.author
     }
-    
+
     var singleLine: String {
         let formattedText = text.replacingOccurrences(of: "\n", with: " ")
         return "\(author): \(formattedText)"
     }
-    
+
     var multiLine: String {
         "\"\(text)\"\n   — \(author)"
     }
-    
+
     var attributedString: NSAttributedString {
         // format the text and author of this quote
         var textAttributes = [NSAttributedString.Key: Any]()
