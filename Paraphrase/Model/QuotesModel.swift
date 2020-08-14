@@ -37,8 +37,11 @@ struct QuotesModel {
         } else {
             // no saved quotes; load the default initial quotes
             SwiftyBeaver.info("No saved quotes")
-            let path = Bundle.main.url(forResource: "initial-quotes", withExtension: "json")!
-            quoteData = (try? Data(contentsOf: path)) ?? Data()
+            if let path = Bundle.main.url(forResource: "initial-quotes", withExtension: "json") {
+                quoteData = (try? Data(contentsOf: path)) ?? Data()
+            } else {
+                quoteData = Data()
+            }
         }
 
         let decoder = JSONDecoder()

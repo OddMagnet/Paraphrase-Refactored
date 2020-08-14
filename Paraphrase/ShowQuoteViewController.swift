@@ -25,9 +25,7 @@ class ShowQuoteViewController: UIViewController {
 
         title = quote.author
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
-                                                            target: self,
-                                                            action: #selector(shareQuote))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareQuote))
 
         // assign the formatted text
         quoteLabel.attributedText = quote.attributedString

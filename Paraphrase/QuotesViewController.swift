@@ -24,13 +24,8 @@ class QuotesViewController: UITableViewController {
         title = "Paraphrase"
         navigationController?.navigationBar.prefersLargeTitles = true
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
-                                                           target: self,
-                                                           action: #selector(addQuote))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Random",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(showRandomQuote))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addQuote))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Random", style: .plain, target: self, action: #selector(showRandomQuote))
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,13 +97,13 @@ class QuotesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { [unowned self] (_, indexPath) in
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { [unowned self] _, indexPath in
             SwiftyBeaver.info("Deleting quote at index \(indexPath.row)")
             self.model.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
 
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") { [unowned self] (_, indexPath) in
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { [unowned self] _, indexPath in
             let quote = self.model.quote(at: indexPath.row)
             self.selectedRow = indexPath.row
 
