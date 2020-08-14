@@ -47,8 +47,8 @@ opt_in_rules:
   - trailing_closure
   - unneeded_parentheses_in_closure_argument
   - unused_import
-  - vertical_whitespace_closing_braces
-  - vertical_whitespace_opening_braces
+    # - vertical_whitespace_closing_braces
+    # - vertical_whitespace_opening_braces
   - yoda_condition
 
 
@@ -74,10 +74,9 @@ identifier_name:
     - y
     - z
 
-indentation_width:
-  indentation_width: 2
-
 line_length:
+  warning: 160
+  error: 180
   ignores_urls: true
   ignores_function_declarations: true
   ignores_comments: true
